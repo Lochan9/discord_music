@@ -20,7 +20,6 @@ ytdl_format_options = {
     'default_search': 'auto',
     'source_address': '0.0.0.0' # bind to ipv4 since ipv6 addresses cause issues sometimes
 }
-
 ffmpeg_options = {
     'options': '-vn'
 }
@@ -76,7 +75,6 @@ async def hello(ctx):
 async def die(ctx):
     responses = ['why have you brought my short life to an end', 'i could have done so much more', 'i have a family, kill them instead']
     await ctx.send(choice(responses))
-
 @client.command(name='credits', help='This command returns the credits')
 async def credits(ctx):
     await ctx.send('Made by `RK Coding`')
@@ -106,7 +104,6 @@ async def play(ctx, url):
         voice_channel.play(player, after=lambda e: print('Player error: %s' % e) if e else None)
 
     await ctx.send('**Now playing:** {}'.format(player.title))
-
 @client.command(name='stop', help='This command stops the music and makes the bot leave the voice channel')
 async def stop(ctx):
     voice_client = ctx.message.guild.voice_client
