@@ -85,6 +85,9 @@ async def credits(ctx):
 @client.command(name='creditz', help='This command returns the TRUE credits')
 async def creditz(ctx):
     await ctx.send('**No one but me, lozer!**')
+    
+    
+    
 
 @client.command(name='play', help='This command plays music')
 async def play(ctx, url):
